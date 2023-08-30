@@ -1,0 +1,17 @@
+version: '3.1'
+services:
+  db:
+    image: postgres
+    container_name: bankapp
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: sg
+      POSTGRES_DB: bankapp
+    ports:
+      - "3309:5432"
+    volumes:
+      - bankapp:/var/lib/postgres
+
+volumes:
+  bankapp:
