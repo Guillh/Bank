@@ -5,7 +5,7 @@ import lombok.Data;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "bank_angency")
+@Table(name = "bank_agency")
 @Data
 public class BankAgency {
 

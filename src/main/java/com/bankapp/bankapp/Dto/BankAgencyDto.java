@@ -14,10 +14,8 @@ import javax.persistence.ManyToOne;
 public class BankAgencyDto {
 
     @NotNull
-    @Column(name = "agency_number")
     private Integer agencyNumber;
 
     @NotNull
-    @Column(name = "bank_number")
     private Integer bankNumber;
 }

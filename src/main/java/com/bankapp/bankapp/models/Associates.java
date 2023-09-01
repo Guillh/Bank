@@ -1,5 +1,6 @@
 package com.bankapp.bankapp.models;
 
+import com.sun.istack.NotNull;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -14,15 +15,19 @@ public class Associates {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
 
+//    @NotNull
     @Column(name = "name")
     private String name;
 
+//    @NotNull
     @Column(name = "phone_number")
     private Integer phoneNumber;
 
-    @Column(name = "document_umber")
+//    @NotNull
+    @Column(name = "document_number")
     private Integer documentNumber;
 
+//    @NotNull
     @Column(name = "salary")
     private BigDecimal salary;
 

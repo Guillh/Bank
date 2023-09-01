@@ -18,6 +18,6 @@ public interface BankRepository extends JpaRepository<Bank, Integer> {
     @Query(nativeQuery = true,
             value = "SELECT COUNT(*) > 0 " +
                     "FROM bank b " +
-                    "WHERE b.bank_name = :bankNumber")
+                    "WHERE b.bank_number = :bankNumber")
     boolean countBankByNumber(@Param("bankNumber") Integer bankNumber);
 }
