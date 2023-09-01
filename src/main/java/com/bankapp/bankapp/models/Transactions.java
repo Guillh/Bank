@@ -1,6 +1,7 @@
 package com.bankapp.bankapp.models;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import javax.persistence.criteria.CriteriaBuilder;
@@ -10,6 +11,7 @@ import java.util.Date;
 @Entity
 @Table(name = "transactions")
 @Data
+@NoArgsConstructor
 public class Transactions {
 
     @Id

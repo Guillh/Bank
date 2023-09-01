@@ -26,7 +26,5 @@ public class Associates {
     @Column(name = "salary")
     private BigDecimal salary;
 
-    @Column(name = "transaction_limit")
-    private BigDecimal transactionLimit;
 
 }

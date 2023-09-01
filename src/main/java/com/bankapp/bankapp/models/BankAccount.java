@@ -18,11 +18,11 @@ public class BankAccount {
 
     @ManyToOne
     @JoinColumn(name = "bank_number")
-    private Bank bankNumber;
+    private BankAgency bankNumber;
 
     @ManyToOne
     @JoinColumn(name = "agency_number")
-    private BankAgency agencyNumber;
+    private BankAgency agencyId;
 
     @ManyToOne
     @JoinColumn(name = "associated_id")
@@ -31,8 +31,8 @@ public class BankAccount {
     @Column(name = "balance")
     private BigDecimal balance;
 
-    @ManyToOne
-    @JoinColumn(name = "transaction_limit")
-    private Associates transactionLimit;
+
+    @Column(name = "transaction_limit")
+    private BigDecimal transactionLimit;
 
 }
