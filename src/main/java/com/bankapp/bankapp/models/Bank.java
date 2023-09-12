@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.math.BigDecimal;
 
 @Entity
 @Table(name = "bank")
@@ -17,8 +18,12 @@ public class Bank {
     @Column(name = "bank_number")
     private Integer bankNumber;
 
-    @NotNull
+//    @NotNull
     @Column(name = "bank_name")
     private String bankName;
+
+    @NotNull
+    @Column(name = "full_balance_transaction")
+    private BigDecimal fullBalanceTransaction;
 
 }

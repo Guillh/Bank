@@ -1,12 +1,14 @@
 package com.bankapp.bankapp.models;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
 @Entity
 @Table(name = "bank_agency")
 @Data
+@NoArgsConstructor
 public class BankAgency {
 
     @Id

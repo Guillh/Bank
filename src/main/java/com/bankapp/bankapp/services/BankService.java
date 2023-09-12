@@ -31,7 +31,7 @@ public class BankService {
     public void deleteById(Integer id) {
         this.bankRepository.deleteById(id);
     }
-
+// verificar se o banco poussui agencias antes de deletar
     public Bank getById(Integer id) {
         return this.bankRepository.findById(id).orElseThrow(() -> {
             return new RuntimeException("Banco não encontrado!");
@@ -46,6 +46,7 @@ public class BankService {
             return new RuntimeException("Banco não encntrado!");
         });
         b.setBankName(bank.getBankName());
+        b.setFullBalanceTransaction(bank.getFullBalanceTransaction());
         return ResponseEntity.ok(this.bankRepository.save(b));
 
     }
